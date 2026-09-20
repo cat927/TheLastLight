@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://y7q0m34je6qo"]
 
+[ext_resource type="Texture2D" uid="uid://dxncd6k416eb" path="res://assets/titleScreenButtons.png" id="1_fgkus"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa3yf"]
+atlas = ExtResource("1_fgkus")
+region = Rect2(0, 0, 54, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgrm8"]
+atlas = ExtResource("1_fgkus")
+region = Rect2(0, 22, 54, 24)
+
 [node name="titleScreen" type="Node2D" unique_id=2034610352]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1367403569]
+offset_left = -29.0
+offset_top = -12.0
+offset_right = 26.0
+offset_bottom = 12.0
+texture_normal = SubResource("AtlasTexture_sa3yf")
+texture_hover = SubResource("AtlasTexture_mgrm8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=674077341]
+zoom = Vector2(5, 5)
