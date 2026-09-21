@@ -1,41 +1,23 @@
-extends Node2D
+extends Control
+@onready var tex = $TextureButton
+# Track the number of clicks
+var click_count: int = 0
 
-@export var camera: Camera2D
-@export var padding: float = 50.0
-@export var speed: float = 300.0  # Pixels per second
-
-# Drag your TextureButton here in the Inspector, or rename "TextureButton" to match your scene tree
-@onready var texture_button: TextureButton = $TextureButton
-
-var target_position: Vector2 = Vector2.ZERO
+# Reference the Label node using its unique path in your scene
+@onready var display_label: Label = $Label
 
 func _ready() -> void:
-	# Choose the first target immediately
-	target_position = get_random_position_in_camera()
+	# Set the initial text when the game starts
+	update_display()
 
-func _process(delta: float) -> void:
-	if not texture_button:
-		return
-		
-	# Move global_position toward target_position at a constant speed frame-by-frame
-	texture_button.global_position = texture_button.global_position.move_toward(target_position, speed * delta)
-	
-	# If the button gets close enough to the target, pick a new random target
-	if texture_button.global_position.distance_to(target_position) < 3.0:
-		target_position = get_random_position_in_camera()
 
-func get_random_position_in_camera() -> Vector2:
-	if not camera:
-		camera = get_viewport().get_camera_2d()
-	if not camera:
-		return Vector2.ZERO 
-		
-	var scaled_size = get_viewport_rect().size / camera.zoom
-	var top_left = camera.global_position - (scaled_size / 2.0)
-	
-	var min_x = top_left.x + padding
-	var max_x = top_left.x + scaled_size.x - padding
-	var min_y = top_left.y + padding
-	var max_y = top_left.y + scaled_size.y - padding
-	
-	return Vector2(randf_range(min_x, max_x), randf_range(min_y, max_y))
+# Helper function to easily format your label text
+func update_display() -> void:
+	if tex.clicked == false:
+		display_label.text = "You have failed " + str(click_count) + " times!"
+	else:
+		display_label.text = "YAY! You clicked the button!"
+
+func _on_texture_button_mouse_entered() -> void:
+	click_count += 1
+	update_display()

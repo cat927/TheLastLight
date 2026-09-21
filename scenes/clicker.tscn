@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dr0a8t2gniby8"]
+
+[ext_resource type="Script" uid="uid://c4obu8vj47o75" path="res://scripts/clicker.gd" id="1_ecl7i"]
+
+[node name="Control" type="Control" unique_id=2099901455]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ecl7i")
+
+[node name="Button" type="Button" parent="." unique_id=1768092023]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="." unique_id=1275257580]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 28.0
+offset_bottom = 24.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=909285767]
+zoom = Vector2(4, 4)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
