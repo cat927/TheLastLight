@@ -5,14 +5,14 @@ extends TextureButton
 
 var clicked:bool = false
 
-func _ready() -> void:
+func _ready():
 	# This connects the mouse hover event to our function below
 	mouse_entered.connect(_on_mouse_entered)
 
-func _on_mouse_entered() -> void:
+func _on_mouse_entered():
 	teleport_to_camera_view()
 
-func teleport_to_camera_view() -> void:
+func teleport_to_camera_view():
 	# 1. Get the viewport bounds (screen coordinates)
 	var screen_rect = get_viewport_rect()
 	var screen_top_left = screen_rect.position
@@ -34,15 +34,21 @@ func teleport_to_camera_view() -> void:
 	var random_y = randf_range(min_bound.y + screen_margin, max(min_bound.y + screen_margin, max_y))
 	
 	# 6. Teleport the button using its global world position
-	global_position = Vector2(random_x, random_y)
+	# global_position = Vector2(random_x, random_y)
 
-func _input(event: InputEvent) -> void:
+func _gui_input(event: InputEvent):
 	# 1. Check if it's a mouse button click
-	if event is InputEventMouseButton:
-		# 2. Check if it's a LEFT click and it was just PRESSED down
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			# 3. Check if the global mouse position is inside the moving button
-			if get_global_rect().has_point(event.global_position):
-				clicked = true
-				print("CLICKED A MOVING TARGET!")
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		# 3. Check if the global mouse position is inside the moving button
+		if get_global_rect().has_point(event.global_position):
+			clicked = true
+			print("Left Mouse Input on Target")
 				
+#func _gui_input(event: InputEvent) -> void:
+#	if event is InputEventMouseButton and event.pressed:
+#		# Convert the event to the node's local space
+#		var local_event = make_input_local(event)
+#		
+#		# Check if the local point is inside the local rect (which starts at 0,0)
+#		if Rect2(Vector2.ZERO, size).has_point(local_event.position):
+#			print("Clicked inside the Control node!")
