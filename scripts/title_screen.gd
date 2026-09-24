@@ -3,7 +3,7 @@ extends Control
 # Track the number of clicks
 var click_count: int = 0
 
-# Reference the Label node using its unique path in your scene
+# Reference the Label node using its unique path in your scene 
 @onready var display_label: Label = $Label
 
 func _ready() -> void:
