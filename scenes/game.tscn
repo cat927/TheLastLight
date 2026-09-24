@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c5xync1vlx81l"]
+
+[ext_resource type="Texture2D" uid="uid://6773l1lt45s2" path="res://assets/PixelKnight.png" id="1_uwrxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
+size = Vector2(12.544834, 23.629425)
+
+[node name="Main" type="Node2D" unique_id=1284440620]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=233131782]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1809559094]
+position = Vector2(0.0049266815, 0.8181)
+shape = SubResource("RectangleShape2D_l5guw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=220348555]
+texture_filter = 2
+scale = Vector2(0.079166666, 0.07916667)
+texture = ExtResource("1_uwrxv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1657249239]
+zoom = Vector2(4, 4)
