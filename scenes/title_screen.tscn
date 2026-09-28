@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://y7q0m34je6qo"]
 
 [ext_resource type="Texture2D" uid="uid://bl6jhjiuklpgx" path="res://assets/titleScreenButtons.png" id="1_fgkus"]
-[ext_resource type="Script" uid="uid://b382gmbukjprw" path="res://scripts/title_screen.gd" id="1_sa3yf"]
-[ext_resource type="Script" uid="uid://c6jse512667uu" path="res://scripts/startButton.gd" id="2_sa3yf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sa3yf"]
 atlas = ExtResource("1_fgkus")
@@ -17,7 +15,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_sa3yf")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=856965767]
 layout_mode = 0
@@ -27,7 +24,6 @@ offset_right = 26.0
 offset_bottom = 12.0
 texture_normal = SubResource("AtlasTexture_sa3yf")
 texture_hover = SubResource("AtlasTexture_mgrm8")
-script = ExtResource("2_sa3yf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1086070817]
 zoom = Vector2(4, 4)
