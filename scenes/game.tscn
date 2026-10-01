@@ -2,23 +2,40 @@
 
 [ext_resource type="Texture2D" uid="uid://6773l1lt45s2" path="res://assets/PixelKnight.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bfn2irmj2lbfd" path="res://scripts/player.gd" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://dhb6acmii7vqa" path="res://scripts/camera.gd" id="3_lnu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(42.625385, 85.33615)
 
+[sub_resource type="TileSet" id="TileSet_l5guw"]
+tile_size = Vector2i(64, 64)
+uv_clipping = true
+
 [node name="Main" type="Node2D" unique_id=1708038689]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=673504304]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=673504304]
+z_index = 99
 motion_mode = 1
 script = ExtResource("1_yqjtg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1147575925]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1147575925]
 texture_filter = 1
 scale = Vector2(0.26666668, 0.26666668)
 texture = ExtResource("1_uwrxv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=310425211]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=310425211]
 position = Vector2(0, 0.0117816925)
 shape = SubResource("RectangleShape2D_l5guw")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1336055152]
+[node name="Camera" type="Camera2D" parent="." unique_id=1336055152]
+script = ExtResource("3_lnu2h")
+
+[node name="thingy" type="CharacterBody2D" parent="." unique_id=333703856]
+
+[node name="poopoo" type="Sprite2D" parent="thingy" unique_id=788314534]
+position = Vector2(-43.43954, -4.7274017)
+scale = Vector2(82.75031, 18.968103)
+texture = ExtResource("1_uwrxv")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901456715]
+tile_set = SubResource("TileSet_l5guw")
