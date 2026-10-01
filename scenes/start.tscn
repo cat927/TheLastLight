@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://sem1jc5524y0"]
+
+[ext_resource type="Texture2D" uid="uid://c44f448ktov5p" path="res://icon.svg" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://dm2h8l13ps17q" path="res://scripts/onStart.gd" id="1_2ckv8"]
+[ext_resource type="Script" uid="uid://38sudsxkjyo1" path="res://scripts/onStart2.gd" id="3_bodal"]
+
+[node name="onStart" type="Node2D" unique_id=1164484481]
+script = ExtResource("1_2ckv8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=574021226]
+offset_left = -144.0
+offset_top = -81.0
+offset_right = 144.0
+offset_bottom = 81.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fixed" type="Camera2D" parent="." unique_id=330324695]
+zoom = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1947438810]
+position = Vector2(0, -9)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0bpdh")
+
+[node name="Timer" type="Timer" parent="." unique_id=1201341684]
+wait_time = 0.25
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=433768312]
+texture_filter = 2
+offset_left = -215.0
+offset_top = -6.0
+offset_right = 217.0
+offset_bottom = 66.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 52
+text = "Made with Godot"
+script = ExtResource("3_bodal")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Label" method="_on_timer_timeout"]
