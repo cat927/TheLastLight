@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(42.625385, 85.33615)
 
+[sub_resource type="TileSet" id="TileSet_yqjtg"]
+
 [node name="Main" type="Node2D" unique_id=1708038689]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=673504304]
@@ -22,3 +24,8 @@ position = Vector2(0, 0.0117816925)
 shape = SubResource("RectangleShape2D_l5guw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1336055152]
+
+[node name="TileMap" type="Node2D" parent="." unique_id=637817639]
+
+[node name="ground" type="TileMapLayer" parent="TileMap" unique_id=1115742123]
+tile_set = SubResource("TileSet_yqjtg")

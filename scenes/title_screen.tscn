@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://y7q0m34je6qo"]
 
 [ext_resource type="Texture2D" uid="uid://bl6jhjiuklpgx" path="res://assets/titleScreenButtons.png" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://pdc4rslup08i" path="res://scripts/play.gd" id="2_sa3yf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sa3yf"]
 atlas = ExtResource("1_fgkus")
@@ -24,6 +25,7 @@ offset_right = 26.0
 offset_bottom = 12.0
 texture_normal = SubResource("AtlasTexture_sa3yf")
 texture_hover = SubResource("AtlasTexture_mgrm8")
+script = ExtResource("2_sa3yf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1086070817]
 zoom = Vector2(4, 4)
@@ -35,6 +37,7 @@ offset_top = -68.0
 offset_right = -93.0
 offset_bottom = -45.0
 
+[connection signal="button_up" from="TextureButton" to="TextureButton" method="_on_button_up"]
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="mouse_entered" from="Label" to="." method="_on_label_mouse_entered"]
