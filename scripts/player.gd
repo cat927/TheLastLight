@@ -25,6 +25,6 @@ func _physics_process(delta):
 		velocity.y += vert * SPEED * diag
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-	velocity.x = clamp(velocity.x, -300.0, 300.0)
-	velocity.y = clamp(velocity.y, -300.0, 300.0)
+	velocity.x = clamp(velocity.x, -300.0 * diag, 300.0 * diag)
+	velocity.y = clamp(velocity.y, -300.0 * diag, 300.0 * diag)
 	move_and_slide()
