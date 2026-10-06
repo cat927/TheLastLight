@@ -7,13 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(42.625385, 85.33615)
 
-<<<<<<< HEAD
-[sub_resource type="TileSet" id="TileSet_yqjtg"]
-=======
 [sub_resource type="TileSet" id="TileSet_l5guw"]
 tile_size = Vector2i(64, 64)
 uv_clipping = true
->>>>>>> a1d8b24a433bf996ac1f7e9f7389b021ec347c6b
 
 [node name="Main" type="Node2D" unique_id=1708038689]
 
@@ -31,14 +27,6 @@ texture = ExtResource("1_uwrxv")
 position = Vector2(0, 0.0117816925)
 shape = SubResource("RectangleShape2D_l5guw")
 
-<<<<<<< HEAD
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1336055152]
-
-[node name="TileMap" type="Node2D" parent="." unique_id=637817639]
-
-[node name="ground" type="TileMapLayer" parent="TileMap" unique_id=1115742123]
-tile_set = SubResource("TileSet_yqjtg")
-=======
 [node name="Camera" type="Camera2D" parent="." unique_id=1336055152]
 script = ExtResource("3_lnu2h")
 
@@ -51,4 +39,3 @@ texture = ExtResource("1_uwrxv")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901456715]
 tile_set = SubResource("TileSet_l5guw")
->>>>>>> a1d8b24a433bf996ac1f7e9f7389b021ec347c6b
