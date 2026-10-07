@@ -33,7 +33,6 @@ script = ExtResource("3_lnu2h")
 [node name="thingy" type="CharacterBody2D" parent="." unique_id=333703856]
 
 [node name="poopoo" type="Sprite2D" parent="thingy" unique_id=788314534]
-position = Vector2(-43.43954, -4.7274017)
 scale = Vector2(82.75031, 18.968103)
 texture = ExtResource("1_uwrxv")
 
