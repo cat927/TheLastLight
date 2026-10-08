@@ -38,9 +38,9 @@ script = ExtResource("2_sa3yf")
 [node name="exit" type="TextureButton" parent="." unique_id=204113894]
 layout_mode = 0
 offset_left = -21.0
-offset_top = 38.0
+offset_top = 37.0
 offset_right = 21.0
-offset_bottom = 59.0
+offset_bottom = 58.0
 texture_normal = SubResource("AtlasTexture_sa3yf")
 texture_hover = SubResource("AtlasTexture_mgrm8")
 script = ExtResource("2_sa3yf")
