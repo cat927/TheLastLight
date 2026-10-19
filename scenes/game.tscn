@@ -1,15 +1,23 @@
-[gd_scene format=3 uid="uid://c5xync1vlx81l"]
+[gd_scene format=4 uid="uid://c5xync1vlx81l"]
 
 [ext_resource type="Texture2D" uid="uid://6773l1lt45s2" path="res://assets/PixelKnight.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bfn2irmj2lbfd" path="res://scripts/player.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://dhb6acmii7vqa" path="res://scripts/camera.gd" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://bplvcmr8tugs7" path="res://assets/Tile Grass TFF.png" id="4_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(42.625385, 85.33615)
 
-[sub_resource type="TileSet" id="TileSet_l5guw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
+texture = ExtResource("4_lbhrr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hsm5t"]
 tile_size = Vector2i(64, 64)
-uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_iywne")
 
 [node name="Main" type="Node2D" unique_id=1708038689]
 
@@ -30,11 +38,8 @@ shape = SubResource("RectangleShape2D_l5guw")
 [node name="Camera" type="Camera2D" parent="." unique_id=1336055152]
 script = ExtResource("3_lnu2h")
 
-[node name="thingy" type="CharacterBody2D" parent="." unique_id=333703856]
+[node name="TileMap" type="Node2D" parent="." unique_id=2079944831]
 
-[node name="poopoo" type="Sprite2D" parent="thingy" unique_id=788314534]
-scale = Vector2(82.75031, 18.968103)
-texture = ExtResource("1_uwrxv")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1901456715]
-tile_set = SubResource("TileSet_l5guw")
+[node name="Ground" type="TileMapLayer" parent="TileMap" unique_id=420339454]
+tile_map_data = PackedByteArray("AAAAAP//AAACAAAAAAD/////AAAAAAAAAAD//wAAAAABAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAP7/AAAAAAAAAAD///7/AAAAAAAAAAABAP//AAACAAAAAAABAP7/AAABAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAACAAAAAAD+//7/AAAAAAAAAAACAAAAAAACAAAAAAACAAEAAAAAAAAAAAABAAIAAAABAAAAAAAAAAIAAAAAAAAAAAD//wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wEAAAAAAAAAAAD8/wAAAAAAAAAAAAD8////AAAAAAAAAAD9//7/AAABAAAAAAD9//3/AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wEAAAAAAAAAAAD9////AAAAAAAAAAD8//7/AAAAAAAAAAD8//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAACAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAACAAAAAAADAP//AAACAAAAAAADAP7/AAAAAAAAAAADAP3/AAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAD//wMAAAAAAAAAAAD+/wMAAAAAAAAAAAD8/wMAAAAAAAAAAAADAPz/AAAAAAAAAAACAPz/AAAAAAAAAAABAPz/AAAAAAAAAAAAAPz/AAABAAAAAAD///z/AAAAAAAAAAD+//z/AAAAAAAAAAD9//z/AAAAAAAAAAD8//z/AAAAAAAAAAD9/wMAAAAAAAAAAAAEAP//AAACAAAAAAAFAP//AAACAAAAAAAGAP//AAACAAAAAAAHAP//AAACAAAAAAAIAP//AAACAAAAAAAEAAAAAAACAAAAAAAFAAAAAAACAAAAAAAGAAAAAAACAAAAAAAHAAAAAAACAAAAAAAIAAAAAAACAAAAAAAJAP//AAACAAAAAAAKAP//AAACAAAAAAALAP//AAACAAAAAAAMAP//AAACAAAAAAAMAAAAAAACAAAAAAALAAAAAAACAAAAAAAKAAAAAAACAAAAAAAJAAAAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_hsm5t")

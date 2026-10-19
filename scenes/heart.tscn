@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dlfq5qs70xrkd"]
+
+[ext_resource type="Texture2D" uid="uid://c7bg8gdx1nxhh" path="res://assets/FIRESTUFF.png" id="1_v30as"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsm5t"]
+atlas = ExtResource("1_v30as")
+region = Rect2(84, 18, 23, 37)
+
+[node name="Heart" type="Node2D" unique_id=1247442383]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2141398740]
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_hsm5t")
