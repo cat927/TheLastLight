@@ -1,12 +1,10 @@
 extends AnimatedSprite2D
 
-var num: int = 0
+var healthID: int
 
-func _ready() -> void:
-	num = Global.healthNum
-	Global.healthNum += 1
+func _ready():
+	self.position = Vector2(100, 100) #Vector2(25 + (healthID*40), 20)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.frame = Global.health[num-1]
+	self.frame = 3 #round(clamp((global.health / 3) - (healthID - 1), 0, 1) * 3)

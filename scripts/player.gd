@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 100.0
-const MAX_SPEED = 300.0
+const SPEED = 50.0
+const MAX_SPEED = 150.0
 @onready var sprite = $Sprite2D
 
 func _physics_process(delta):
