@@ -1,23 +1,22 @@
 [gd_scene format=3 uid="uid://dlfq5qs70xrkd"]
 
-[ext_resource type="Texture2D" uid="uid://c7bg8gdx1nxhh" path="res://assets/FIRESTUFF.png" id="1_v30as"]
-[ext_resource type="Texture2D" uid="uid://dq7k4ix400746" path="res://assets/untitled.png" id="2_krgnv"]
+[ext_resource type="Texture2D" uid="uid://bvm7525uijexs" path="res://assets/FIRESTUFF2.png" id="1_ycbwg"]
 [ext_resource type="Script" uid="uid://cbq1ufldk7bua" path="res://scripts/health.gd" id="2_ycbwg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krgnv"]
-atlas = ExtResource("2_krgnv")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8nnyc"]
-atlas = ExtResource("2_krgnv")
-region = Rect2(64, 0, 64, 64)
+atlas = ExtResource("1_ycbwg")
+region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_txm48"]
-atlas = ExtResource("2_krgnv")
-region = Rect2(0, 0, 64, 64)
+atlas = ExtResource("1_ycbwg")
+region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v30as"]
-atlas = ExtResource("1_v30as")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nnyc"]
+atlas = ExtResource("1_ycbwg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mtg8"]
+atlas = ExtResource("1_ycbwg")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hsm5t"]
@@ -27,13 +26,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_krgnv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8nnyc")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_txm48")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v30as")
+"texture": SubResource("AtlasTexture_8nnyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mtg8")
 }],
 "loop": 1,
 "name": &"default",
@@ -45,5 +44,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1525683861]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_hsm5t")
-frame = 2
 script = ExtResource("2_ycbwg")
