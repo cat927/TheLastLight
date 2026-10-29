@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bfn2irmj2lbfd" path="res://scripts/player.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://dhb6acmii7vqa" path="res://scripts/camera.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://bplvcmr8tugs7" path="res://assets/Tile Grass TFF.png" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://bmeip36j0nhjo" path="res://scenes/progress_bar.gd" id="6_p57ef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(20.002764, 40.042778)
@@ -20,10 +21,17 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5guw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbvrx"]
+bg_color = Color(0.030050145, 0.45763612, 0.9999998, 1)
+
 [node name="Main" type="Node2D" unique_id=1708038689]
 script = ExtResource("1_iywne")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=673504304]
+unique_name_in_owner = true
 z_index = 99
 motion_mode = 1
 script = ExtResource("1_yqjtg")
@@ -52,3 +60,20 @@ tile_map_data = PackedByteArray("AAAAAP//AAACAAAAAAD/////AAAAAAAAAAD//wAAAAABAAA
 tile_set = SubResource("TileSet_hsm5t")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1447887937]
+
+[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=456071314]
+z_index = 4096
+anchors_preset = -1
+anchor_left = 0.423
+anchor_top = -8.815001
+anchor_right = 0.423
+anchor_bottom = -8.815001
+offset_left = -477.29602
+offset_top = 5767.12
+offset_right = -347.95038
+offset_bottom = 5794.12
+theme_override_styles/background = SubResource("StyleBoxFlat_l5guw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gbvrx")
+step = 1.0
+show_percentage = false
+script = ExtResource("6_p57ef")
