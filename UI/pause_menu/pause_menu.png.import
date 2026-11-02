@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7bg8gdx1nxhh"
-path="res://.godot/imported/FIRESTUFF.png-72771dec2417ae00f4539665e48f629a.ctex"
+uid="uid://cwd4s8l5ibqkv"
+path="res://.godot/imported/pause_menu.png-3212aa34f6775306800c865a2b8dd1e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FIRESTUFF.png"
-dest_files=["res://.godot/imported/FIRESTUFF.png-72771dec2417ae00f4539665e48f629a.ctex"]
+source_file="res://UI/pause_menu/pause_menu.png"
+dest_files=["res://.godot/imported/pause_menu.png-3212aa34f6775306800c865a2b8dd1e2.ctex"]
 
 [params]
 
