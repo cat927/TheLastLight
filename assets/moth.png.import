@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/moth.png.import
 uid="uid://sx6qrcfxhx4l"
 path="res://.godot/imported/moth.png-299b329765c3a47f9cbfd8410feef248.ctex"
+========
+uid="uid://cwd4s8l5ibqkv"
+path="res://.godot/imported/pause_menu.png-7d253e03610f73816693981034c6a1ef.ctex"
+>>>>>>>> 6463f7f2fe9b6a7237bc9fbf8d52a2b9448ce2fb:assets/pause_menu.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/moth.png.import
 source_file="res://assets/moth.png"
 dest_files=["res://.godot/imported/moth.png-299b329765c3a47f9cbfd8410feef248.ctex"]
+========
+source_file="res://assets/pause_menu.png"
+dest_files=["res://.godot/imported/pause_menu.png-7d253e03610f73816693981034c6a1ef.ctex"]
+>>>>>>>> 6463f7f2fe9b6a7237bc9fbf8d52a2b9448ce2fb:assets/pause_menu.png.import
 
 [params]
 
