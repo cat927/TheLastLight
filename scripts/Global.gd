@@ -5,6 +5,9 @@ var maxHealth: int = 12
 var health: int = 12
 var mana: int = 20
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _process(delta):
 	if Input.is_action_just_pressed("space"):
 		health -=1

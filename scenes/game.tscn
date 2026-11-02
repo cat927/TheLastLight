@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://dhb6acmii7vqa" path="res://scripts/camera.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://bplvcmr8tugs7" path="res://assets/Tile Grass TFF.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://bmeip36j0nhjo" path="res://scenes/progress_bar.gd" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://cwd4s8l5ibqkv" path="res://assets/pause_menu.png" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://c2kx7677tjcfv" path="res://scripts/pause_menu.gd" id="8_gee14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
 size = Vector2(20.002764, 40.042778)
@@ -27,7 +29,22 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbvrx"]
 bg_color = Color(0.030050145, 0.45763612, 0.9999998, 1)
 
-[node name="Main" type="Node2D" unique_id=1708038689]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
+atlas = ExtResource("7_u5sy4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hsm5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gee14")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="game" type="Node2D" unique_id=1708038689]
 process_mode = 1
 script = ExtResource("1_iywne")
 
@@ -78,5 +95,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_gbvrx")
 step = 1.0
 show_percentage = false
 script = ExtResource("6_p57ef")
-[node name="Pause Menu" type="Sprite2D" parent="UI" unique_id=500257490]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI" unique_id=1779275067]
 process_mode = 2
+sprite_frames = SubResource("SpriteFrames_hsm5t")
+script = ExtResource("8_gee14")

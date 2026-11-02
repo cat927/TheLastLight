@@ -39,7 +39,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Heart" type="Node2D" unique_id=1247442383]
+[node name="heart" type="Node2D" unique_id=1247442383]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1525683861]
 scale = Vector2(1.25, 1.25)
