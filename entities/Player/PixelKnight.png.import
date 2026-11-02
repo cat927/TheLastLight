@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6773l1lt45s2"
-path="res://.godot/imported/PixelKnight.png-e6dcc08251b0ce171223bac6f5347673.ctex"
+uid="uid://d2pryo6ekmf14"
+path="res://.godot/imported/PixelKnight.png-adf39cdac47e92fa7bfcfe36531d3392.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PixelKnight.png"
-dest_files=["res://.godot/imported/PixelKnight.png-e6dcc08251b0ce171223bac6f5347673.ctex"]
+source_file="res://entities/Player/PixelKnight.png"
+dest_files=["res://.godot/imported/PixelKnight.png-adf39cdac47e92fa7bfcfe36531d3392.ctex"]
 
 [params]
 

@@ -29,4 +29,4 @@ func _on_timer_timeout():
 	elif shown == 1:
 		fadeOut()
 	elif shown == 2:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://UI/title_screen/title_screen.tscn")
