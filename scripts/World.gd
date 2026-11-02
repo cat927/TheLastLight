@@ -7,4 +7,3 @@ func _ready():
 		var heart = preload("res://scenes/heart.tscn").instantiate()
 		heart.get_node("AnimatedSprite2D").healthID = i
 		UI.add_child(heart)
-		print("Heart Created!")

@@ -19,7 +19,7 @@ region = Rect2(139, 22, 42, 20)
 atlas = ExtResource("1_fgkus")
 region = Rect2(203, 22, 42, 20)
 
-[node name="Control" type="Control" unique_id=1003800388]
+[node name="title_screen" type="Control" unique_id=1003800388]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 50.0
 const MAX_SPEED = 150.0
 const DASH_CD = 1.0
-const DASH_SPEED = 600.0
+const DASH_SPEED = 450.0
 const DASH_TIME = 0.15
 
 var dash_timer = 0.0
@@ -21,6 +21,7 @@ func _physics_process(delta):
 			dash_timer = DASH_TIME + DASH_CD
 		if dash_timer > DASH_CD:
 			dash_timer -= delta
+			sprite.flip_h = (sign(velocity.x) - 1) / -2
 			vel_slide = false
 		else:
 			vel_slide = true
