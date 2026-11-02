@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 50.0
 const MAX_SPEED = 150.0
-const DASH_CD = 1.0
+const DASH_CD = 2.0
 const DASH_SPEED = 450.0
 const DASH_TIME = 0.15
 
