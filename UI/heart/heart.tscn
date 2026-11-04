@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dlfq5qs70xrkd"]
 
 [ext_resource type="Texture2D" uid="uid://bvm7525uijexs" path="res://UI/heart/heartSprite.png" id="1_ku5s3"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://cbq1ufldk7bua" path="res://UI/heart/health.gd" id="2_ku5s3"]
+=======
+[ext_resource type="Script" uid="uid://cbq1ufldk7bua" path="res://UI/heart/health.gd" id="2_8y178"]
+>>>>>>> 6f445d6d6b1c11264ecf9facbb4d180fcf826e06
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krgnv"]
 atlas = ExtResource("1_ku5s3")
@@ -44,4 +48,8 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1525683861]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_hsm5t")
+<<<<<<< HEAD
 script = ExtResource("2_ku5s3")
+=======
+script = ExtResource("2_8y178")
+>>>>>>> 6f445d6d6b1c11264ecf9facbb4d180fcf826e06

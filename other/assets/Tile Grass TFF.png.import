@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwd4s8l5ibqkv"
-path="res://.godot/imported/pause_menu.png-7d253e03610f73816693981034c6a1ef.ctex"
+uid="uid://bplvcmr8tugs7"
+path="res://.godot/imported/Tile Grass TFF.png-57c96a095284072694593f5da286fb91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pause_menu.png"
-dest_files=["res://.godot/imported/pause_menu.png-7d253e03610f73816693981034c6a1ef.ctex"]
+source_file="res://other/assets/Tile Grass TFF.png"
+dest_files=["res://.godot/imported/Tile Grass TFF.png-57c96a095284072694593f5da286fb91.ctex"]
 
 [params]
 
