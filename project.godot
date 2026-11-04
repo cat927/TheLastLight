@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global="*uid://erjqctbdk80f"
-Pause="*uid://b4tidvnu3npxu"
+pause="*uid://b4tidvnu3npxu"
+global="*res://scripts/Global.gd"
 
 [display]
 

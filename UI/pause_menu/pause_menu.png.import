@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6773l1lt45s2"
-path="res://.godot/imported/PixelKnight.png-e6dcc08251b0ce171223bac6f5347673.ctex"
+uid="uid://cwd4s8l5ibqkv"
+path="res://.godot/imported/pause_menu.png-3212aa34f6775306800c865a2b8dd1e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PixelKnight.png"
-dest_files=["res://.godot/imported/PixelKnight.png-e6dcc08251b0ce171223bac6f5347673.ctex"]
+source_file="res://UI/pause_menu/pause_menu.png"
+dest_files=["res://.godot/imported/pause_menu.png-3212aa34f6775306800c865a2b8dd1e2.ctex"]
 
 [params]
 
