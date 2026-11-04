@@ -23,3 +23,6 @@ z_index = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moth/Area2D" unique_id=1692787048]
 position = Vector2(9.1552734e-05, 14.499569)
 shape = SubResource("CircleShape2D_mv1jd")
+
+[connection signal="body_entered" from="Moth/Area2D" to="Moth" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Moth/Area2D" to="Moth" method="_on_area_2d_body_exited"]

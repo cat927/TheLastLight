@@ -12,7 +12,7 @@ var vel_slide = true
 @onready var sprite = $Sprite2D
 
 func _physics_process(delta):
-	if global.health == 0:
+	if global.health <= 0:
 		self.position = Vector2(0, 0)
 	else:
 		if Input.is_action_just_pressed("right_mouse") and dash_timer <= 0.0:
