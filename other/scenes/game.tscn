@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bplvcmr8tugs7" path="res://other/assets/Tile Grass TFF.png" id="6_q8vyg"]
 [ext_resource type="Script" uid="uid://bmeip36j0nhjo" path="res://UI/progress_bar/progress_bar.gd" id="7_a2ynw"]
 [ext_resource type="Texture2D" uid="uid://cwd4s8l5ibqkv" path="res://UI/pause_menu/pause_menu.png" id="8_1jd3o"]
+[ext_resource type="Texture2D" uid="uid://bl6jhjiuklpgx" path="res://UI/title_screen/titleScreenButtons.png" id="9_1hcal"]
 [ext_resource type="Script" uid="uid://c2kx7677tjcfv" path="res://UI/pause_menu/pause_menu.gd" id="9_kk0wc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5guw"]
@@ -28,6 +29,18 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbvrx"]
 bg_color = Color(0.030050145, 0.45763612, 0.9999998, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsm5t"]
+atlas = ExtResource("9_1hcal")
+region = Rect2(139, 22, 42, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgrm8"]
+atlas = ExtResource("9_1hcal")
+region = Rect2(203, 22, 42, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hcal"]
+atlas = ExtResource("9_1hcal")
+region = Rect2(7, 22, 50, 20)
 
 [node name="game" type="Node2D" unique_id=1708038689]
 process_mode = 1
@@ -79,12 +92,39 @@ step = 1.0
 show_percentage = false
 script = ExtResource("7_a2ynw")
 
-[node name="pause_menu" type="TextureRect" parent="UI" unique_id=1247460342]
+[node name="CenterContainer" type="CenterContainer" parent="UI" unique_id=174774704]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="pause_menu" type="TextureRect" parent="UI/CenterContainer" unique_id=1247460342]
 process_mode = 3
-anchors_preset = -1
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+z_index = 1
+layout_mode = 2
 texture = ExtResource("8_1jd3o")
 script = ExtResource("9_kk0wc")
+
+[node name="exit" type="TextureButton" parent="UI/CenterContainer/pause_menu" unique_id=1505430656]
+z_index = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 62.0
+offset_bottom = 90.0
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_hsm5t")
+texture_hover = SubResource("AtlasTexture_mgrm8")
+
+[node name="resume" type="TextureButton" parent="UI/CenterContainer/pause_menu" unique_id=1960300818]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 15.0
+offset_right = 62.0
+offset_bottom = 35.0
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_1hcal")
+
+[connection signal="button_up" from="UI/CenterContainer/pause_menu/exit" to="UI/CenterContainer/pause_menu" method="_on_exit_button_up"]
+[connection signal="button_up" from="UI/CenterContainer/pause_menu/resume" to="UI/CenterContainer/pause_menu" method="_on_resume_button_up"]

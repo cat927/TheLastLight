@@ -46,4 +46,4 @@ func remove_item_from_paused(item):
 			paused.remove_at(x)
 
 func togglePause():
-	get_tree().paused = !get_tree().paused
+	get_tree().paused = true
