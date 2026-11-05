@@ -1,11 +1,12 @@
 extends Node
 
 @onready var paused: Array = []
-var current_scene_name: String = ""
+var current_scene_name = ""
 var run: bool = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	current_scene_name = get_tree().current_scene.scene_file_path.get_file()
 
 func _enter_tree() -> void:
 	get_tree().scene_changed.connect(_on_scene_changed)
