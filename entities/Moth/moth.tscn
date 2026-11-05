@@ -4,24 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://vb8and8gsa0i" path="res://entities/Moth/moth.png" id="2_jcbvo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mv1jd"]
-radius = 35.695976
+radius = 38.0
 
 [node name="moth" type="Node2D" unique_id=1212106663]
 
 [node name="Moth" type="CharacterBody2D" parent="." unique_id=683166015]
-position = Vector2(400, -16)
 motion_mode = 1
 script = ExtResource("1_el0xg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Moth" unique_id=1307014478]
 z_index = 5
+position = Vector2(0, -16)
 texture = ExtResource("2_jcbvo")
 
 [node name="Area2D" type="Area2D" parent="Moth" unique_id=350599757]
 z_index = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Moth/Area2D" unique_id=1692787048]
-position = Vector2(9.1552734e-05, 14.499569)
+[node name="Range" type="CollisionShape2D" parent="Moth/Area2D" unique_id=1692787048]
 shape = SubResource("CircleShape2D_mv1jd")
 
 [connection signal="body_entered" from="Moth/Area2D" to="Moth" method="_on_area_2d_body_entered"]

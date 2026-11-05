@@ -101,6 +101,7 @@ grow_vertical = 2
 
 [node name="pause_menu" type="TextureRect" parent="UI/CenterContainer" unique_id=1247460342]
 process_mode = 3
+visible = false
 z_index = 1
 layout_mode = 2
 texture = ExtResource("8_1jd3o")
