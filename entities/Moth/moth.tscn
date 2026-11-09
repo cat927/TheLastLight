@@ -7,6 +7,7 @@
 atlas = ExtResource("2_jcbvo")
 region = Rect2(0, 64, 64, 64)
 
+<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_jcbvo"]
 atlas = ExtResource("2_jcbvo")
 region = Rect2(64, 64, 64, 64)
@@ -140,17 +141,24 @@ animations = [{
 "speed": 8.0
 }]
 
+=======
+>>>>>>> 6b4d7be765325899a5c7d820d100e30fdb3df6bd
 [node name="moth" type="CharacterBody2D" unique_id=683166015]
 motion_mode = 1
 script = ExtResource("1_el0xg")
 
+<<<<<<< HEAD
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=908056338]
+=======
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1307014478]
+>>>>>>> 6b4d7be765325899a5c7d820d100e30fdb3df6bd
 z_index = 5
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_l5guw")
 animation = &"walk"
 frame_progress = 0.13443634
 
+<<<<<<< HEAD
 [node name="Attack Range" type="Area2D" parent="." unique_id=350599757]
 z_index = 6
 
@@ -160,3 +168,13 @@ z_index = 6
 
 [connection signal="body_entered" from="Attack Range" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Attack Range" to="." method="_on_area_2d_body_exited"]
+=======
+[node name="Area2D" type="Area2D" parent="." unique_id=350599757]
+z_index = 6
+
+[node name="Range" type="CollisionShape2D" parent="Area2D" unique_id=1692787048]
+shape = SubResource("CircleShape2D_mv1jd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+>>>>>>> 6b4d7be765325899a5c7d820d100e30fdb3df6bd
