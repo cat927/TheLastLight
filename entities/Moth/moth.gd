@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var TARGET: String = "Player"
 @export var SPEED: float = 25.0
 @export var MAX_SPEED: float = 100.0
+const spawn_path = "Moths"
+var type = "base"
 
 var attack_timer = 0.0
 var target_inside = false
