@@ -3,25 +3,160 @@
 [ext_resource type="Script" uid="uid://uec7dhg0si22" path="res://entities/Moth/moth.gd" id="1_el0xg"]
 [ext_resource type="Texture2D" uid="uid://vb8and8gsa0i" path="res://entities/Moth/moth.png" id="2_jcbvo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mv1jd"]
-radius = 38.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_el0xg"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(0, 64, 64, 64)
 
-[node name="moth" type="Node2D" unique_id=1212106663]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcbvo"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(64, 64, 64, 64)
 
-[node name="Moth" type="CharacterBody2D" parent="." unique_id=683166015]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv1jd"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0gm2"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44i5q"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frby5"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpysy"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(384, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8804x"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8o0a"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj70x"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqcxs"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cff1b"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onwpu"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ff3j"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndxvj"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewevm"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhug1"]
+atlas = ExtResource("2_jcbvo")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l5guw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el0xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcbvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv1jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0gm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44i5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frby5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpysy")
+}],
+"loop": 1,
+"name": &"bite",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8804x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8o0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj70x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqcxs")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cff1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onwpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ff3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndxvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewevm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhug1")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="moth" type="CharacterBody2D" unique_id=683166015]
 motion_mode = 1
 script = ExtResource("1_el0xg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Moth" unique_id=1307014478]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=908056338]
 z_index = 5
 position = Vector2(0, -16)
-texture = ExtResource("2_jcbvo")
+sprite_frames = SubResource("SpriteFrames_l5guw")
+animation = &"walk"
+frame_progress = 0.13443634
 
-[node name="Area2D" type="Area2D" parent="Moth" unique_id=350599757]
+[node name="Attack Range" type="Area2D" parent="." unique_id=350599757]
 z_index = 6
 
-[node name="Range" type="CollisionShape2D" parent="Moth/Area2D" unique_id=1692787048]
-shape = SubResource("CircleShape2D_mv1jd")
+[node name="Attack" type="Area2D" parent="." unique_id=2036123470]
 
-[connection signal="body_entered" from="Moth/Area2D" to="Moth" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Moth/Area2D" to="Moth" method="_on_area_2d_body_exited"]
+[node name="Target Range" type="Area2D" parent="." unique_id=435798177]
+
+[connection signal="body_entered" from="Attack Range" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Attack Range" to="." method="_on_area_2d_body_exited"]
