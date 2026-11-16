@@ -7,7 +7,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	visible = get_tree().paused
+	if !global.is_console_open:
+		visible = get_tree().paused
 
 
 func _on_exit_button_up():
