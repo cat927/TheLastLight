@@ -72,10 +72,10 @@ shape = SubResource("RectangleShape2D_l5guw")
 [node name="Camera" type="Camera2D" parent="." unique_id=1336055152]
 z_index = 4096
 zoom = Vector2(1.8, 1.8)
-limit_left = -576
-limit_top = -320
-limit_right = 1472
-limit_bottom = 896
+limit_left = -640
+limit_top = -640
+limit_right = 640
+limit_bottom = 640
 script = ExtResource("5_c6em1")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=2079944831]
